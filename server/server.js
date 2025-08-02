@@ -30,7 +30,8 @@ app.post('/api/sendemail', async (req, res) => {
     });
     res.status(200).json({ success: true, message: 'Email sent successfully' });
   }
-  catch (error) {
+  catch (err) {
+    console.log(err);
     res.status(500).json({ success: false, message: 'Failed to send email' });
   }
 });
@@ -38,9 +39,10 @@ app.post('/api/sendemail', async (req, res) => {
 
 const start = async ()=>{
     try{
-        app.listen(PORT); 
+        app.listen(PORT,()=>{console.log("hey its working")}); 
     }
     catch(err){
+      console.log(err);
         res.status(500);
     }
 }
