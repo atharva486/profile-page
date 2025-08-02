@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-app.use(cors({origin:'https://profile-page-one-steel.vercel.app/',
+app.use(cors({origin:'https://profile-page-one-steel.vercel.app',
 }));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
