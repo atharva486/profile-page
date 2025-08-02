@@ -10,31 +10,24 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const homeHeight = document.getElementById('home')?.offsetHeight || 0;
-      const scrollY = window.scrollY;
-      setShowMenu(scrollY > homeHeight / 4);
+      setShowMenu(window.scrollY > homeHeight / 4);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="p-0 m-0 w-full min-h-screen flex flex-col">
-      <nav
-        className={`${showMenu ? 'w-[85vw] md:w-1/3' : 'w-0'} h-14 fixed top-4 right-1/3 rounded-3xl text-base flex flex-wrap justify-center gap-2 items-center bg-zinc-800 overflow-hidden transition-all duration-700 z-[100] px-2`}>
-        <a href="#home" className="text-white px-3 py-2 hover:border-b-4 hover:border-blue-500 transition-all duration-300">Home</a>
-        <a href="#about" className="text-white px-3 py-2 hover:border-b-4 hover:border-purple-500 transition-all duration-300">About</a>
-        <a href="#skill" className="text-white px-3 py-2 hover:border-b-4 hover:border-green-500 transition-all duration-300">Skill</a>
-        <a href="#contact" className="text-white px-3 py-2 hover:border-b-4 hover:border-pink-500 transition-all duration-300">Contact</a>
+    <div className="w-full min-h-screen">
+      <nav className={`fixed top-4 left-1/2 transform -translate-x-1/2 rounded-3xl bg-zinc-800 z-[100] overflow-hidden transition-all duration-700 flex justify-center items-center gap-2 ${showMenu ? 'px-3 py-2 max-w-[90vw]' : 'w-0 h-0 p-0'}`}>
+        <a href="#home" className="text-white text-sm md:text-base px-2 py-1 hover:border-b-4 hover:border-blue-500 transition-all">Home</a>
+        <a href="#about" className="text-white text-sm md:text-base px-2 py-1 hover:border-b-4 hover:border-purple-500 transition-all">About</a>
+        <a href="#skill" className="text-white text-sm md:text-base px-2 py-1 hover:border-b-4 hover:border-green-500 transition-all">Skill</a>
+        <a href="#contact" className="text-white text-sm md:text-base px-2 py-1 hover:border-b-4 hover:border-pink-500 transition-all">Contact</a>
       </nav>
-
-
-      <div className="p-0 m-0 w-full min-h-screen">
-        <Home />
-        <About />
-        <Skill />
-        <Contact />
-      </div>
+      <Home />
+      <About />
+      <Skill />
+      <Contact />
     </div>
   );
 }
