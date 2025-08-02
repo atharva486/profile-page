@@ -46,8 +46,8 @@ The goal of this project is to provide a professional online presence, showcase 
 
 ## 🔗 Live Demo
 
-👉 [Visit the live site](https://atharva486.github.io/profile-page)  
-_(Replace with actual live link)_
+👉 [Visit the live site]https://profile-page-one-steel.vercel.app/
+
 
 ---
 
