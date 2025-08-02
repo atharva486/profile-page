@@ -23,7 +23,7 @@ function Contact() {
   }
   const send_email = async (e)=>{
     e.preventDefault();
-    let res = await axios.post('/api/sendemail',{Name,email,message});
+    let res = await axios.post('https://your-backend.onrender.com/api/sendemail',{Name,email,message});
     if(res.data.success)
       console.log("message sent");
     else
