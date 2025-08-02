@@ -1,5 +1,6 @@
 import React, { useRef,useState,useEffect } from 'react';
 import axios  from 'axios';
+const API_BASE = import.meta.env.VITE_BACKEND_URL;
 
 function Contact() {
   const textareaRef = useRef(null);
@@ -23,7 +24,7 @@ function Contact() {
   }
   const send_email = async (e)=>{
     e.preventDefault();
-    let res = await axios.post('https://your-backend.onrender.com/api/sendemail',{Name,email,message});
+    let res = await axios.post(`${API_BASE}/api/sendemail`,{Name,email,message});
     if(res.data.success)
       console.log("message sent");
     else

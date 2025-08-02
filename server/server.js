@@ -39,7 +39,7 @@ app.post('/api/sendemail', async (req, res) => {
 
 const start = async ()=>{
     try{
-        app.listen(PORT,()=>{console.log("hey its working")}); 
+        app.listen(PORT,()=>{console.log('hey its working %s',PORT)}); 
     }
     catch(err){
       console.log(err);
