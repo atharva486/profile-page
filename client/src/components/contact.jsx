@@ -26,12 +26,13 @@ function Contact() {
     e.preventDefault();
     let res = await axios.post(`${API_BASE}/api/sendemail`,{Name,email,message});
     if(res.data.success)
-      console.log("message sent");
+      alert("message sent");
     else
-      console.log("message not sent")
+      alert("Something went Wrong");
+    setEmail('');
+    setMessage('');
+    setName('');
   }
-
-
   return (
     <>
       <div id='contact' className='w-full bg-zinc-950 text-white h-[120vh] py-20 flex flex-col'>
