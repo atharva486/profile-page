@@ -36,7 +36,6 @@ The goal of this project is to provide a professional online presence, showcase 
 ---
 
 ## 🛠️ Tech Stack
-
 | Category       | Technologies                           |
 |----------------|----------------------------------------|
 | **Frontend**   | React.js, Tailwind CSS, HTML5, JSX     |
