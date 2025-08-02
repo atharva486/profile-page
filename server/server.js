@@ -3,7 +3,8 @@ const app = express();
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-app.use(cors());
+app.use(cors({origin:'https://profile-page-one-steel.vercel.app/',
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 let PORT =process.env.PORT || 5100;
