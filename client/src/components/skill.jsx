@@ -38,7 +38,6 @@ function Skill() {
         </div>
 
         <div className="flex flex-col lg:flex-row justify-between mx-10 lg:mx-20 mt-10 gap-10">
-          {/* Core Skills */}
           <div className="w-full lg:w-1/2 space-y-6">
             {coreSkills.map((skill, index) => (
               <div key={index}>
@@ -56,9 +55,7 @@ function Skill() {
             ))}
           </div>
 
-          {/* Tech Stack + Learning */}
           <div className="w-full lg:w-1/2 flex flex-col gap-6">
-            {/* Technologies */}
             <div>
               <p className="text-2xl mb-3 text-center">Technologies</p>
               <div className="flex flex-wrap justify-center gap-3 px-4">
@@ -81,8 +78,6 @@ function Skill() {
                 ))}
               </div>
             </div>
-
-            {/* Current Focus */}
             <div className="border border-zinc-700 rounded-3xl p-5">
               <p className="text-2xl mb-3">Current Focus:</p>
               <p className="text-zinc-400 mb-2 text-sm">
