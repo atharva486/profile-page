@@ -15,10 +15,11 @@ function Contact() {
   const send_email = async (e) => {
     e.preventDefault();
     let res = await axios.post(`${API_BASE}/api/sendemail`, { Name, email, message });
-    alert(res.data.success ? "Message Sent" : "Something went wrong");
-    setName('');
+     setName('');
     setEmail('');
     setMessage('');
+    alert(res.data.success ? "Message Sent" : "Something went wrong");
+   
   };
 
   return (
